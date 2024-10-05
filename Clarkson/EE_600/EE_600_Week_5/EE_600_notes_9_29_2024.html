@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.53">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Glen Sanabria">
+<meta name="dcterms.date" content="2024-09-29">
+
+<title>EE600 Week 5 Notes – University Notes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">University Notes</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Clarkson/clarkson_university.html"> 
+<span class="menu-text">Clarkson University Notes</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#energy-storage-technologies" id="toc-energy-storage-technologies" class="nav-link active" data-scroll-target="#energy-storage-technologies"><span class="header-section-number">1</span> Energy Storage Technologies</a>
+  <ul class="collapse">
+  <li><a href="#curtailment-managing-oversupply" id="toc-curtailment-managing-oversupply" class="nav-link" data-scroll-target="#curtailment-managing-oversupply"><span class="header-section-number">1.1</span> Curtailment: Managing Oversupply</a></li>
+  <li><a href="#managing-renewble-energy-over-supply" id="toc-managing-renewble-energy-over-supply" class="nav-link" data-scroll-target="#managing-renewble-energy-over-supply"><span class="header-section-number">1.2</span> Managing Renewble Energy Over Supply</a></li>
+  <li><a href="#time-of-use-tou-rate" id="toc-time-of-use-tou-rate" class="nav-link" data-scroll-target="#time-of-use-tou-rate"><span class="header-section-number">1.3</span> Time of Use (TOU) Rate</a></li>
+  <li><a href="#energy-storage" id="toc-energy-storage" class="nav-link" data-scroll-target="#energy-storage"><span class="header-section-number">1.4</span> Energy Storage</a></li>
+  <li><a href="#benjamin-franklins-battery" id="toc-benjamin-franklins-battery" class="nav-link" data-scroll-target="#benjamin-franklins-battery"><span class="header-section-number">1.5</span> Benjamin Franklin’s Battery</a></li>
+  <li><a href="#classification-of-energy-storage-technologies-based-on-the-storage-methodology" id="toc-classification-of-energy-storage-technologies-based-on-the-storage-methodology" class="nav-link" data-scroll-target="#classification-of-energy-storage-technologies-based-on-the-storage-methodology"><span class="header-section-number">1.6</span> Classification of energy storage technologies based on the storage methodology</a></li>
+  <li><a href="#mechanical-storage" id="toc-mechanical-storage" class="nav-link" data-scroll-target="#mechanical-storage"><span class="header-section-number">1.7</span> Mechanical Storage</a>
+  <ul class="collapse">
+  <li><a href="#pumped-hydro-storage-phs" id="toc-pumped-hydro-storage-phs" class="nav-link" data-scroll-target="#pumped-hydro-storage-phs"><span class="header-section-number">1.7.1</span> Pumped Hydro Storage (PHS)</a></li>
+  <li><a href="#large-scale-diabatic-in-ground-compressed-air-energy-storage-caes-system" id="toc-large-scale-diabatic-in-ground-compressed-air-energy-storage-caes-system" class="nav-link" data-scroll-target="#large-scale-diabatic-in-ground-compressed-air-energy-storage-caes-system"><span class="header-section-number">1.7.2</span> Large-Scale diabatic in-ground Compressed Air Energy Storage (CAES) System</a></li>
+  <li><a href="#modern-flywheel-energy-storage-fes" id="toc-modern-flywheel-energy-storage-fes" class="nav-link" data-scroll-target="#modern-flywheel-energy-storage-fes"><span class="header-section-number">1.7.3</span> Modern Flywheel Energy Storage (FES)</a></li>
+  </ul></li>
+  <li><a href="#electrical-storage" id="toc-electrical-storage" class="nav-link" data-scroll-target="#electrical-storage"><span class="header-section-number">1.8</span> Electrical Storage</a>
+  <ul class="collapse">
+  <li><a href="#super-capacitor-energy-storage-sces" id="toc-super-capacitor-energy-storage-sces" class="nav-link" data-scroll-target="#super-capacitor-energy-storage-sces"><span class="header-section-number">1.8.1</span> Super Capacitor Energy Storage (SCES)</a></li>
+  <li><a href="#superconducting-magnetic-energy-storage-smes" id="toc-superconducting-magnetic-energy-storage-smes" class="nav-link" data-scroll-target="#superconducting-magnetic-energy-storage-smes"><span class="header-section-number">1.8.2</span> Superconducting Magnetic Energy Storage (SMES)</a></li>
+  </ul></li>
+  <li><a href="#electrochemical-storage" id="toc-electrochemical-storage" class="nav-link" data-scroll-target="#electrochemical-storage"><span class="header-section-number">1.9</span> Electrochemical Storage</a>
+  <ul class="collapse">
+  <li><a href="#lithium-ion-betteries" id="toc-lithium-ion-betteries" class="nav-link" data-scroll-target="#lithium-ion-betteries"><span class="header-section-number">1.9.1</span> Lithium-Ion Betteries</a></li>
+  </ul></li>
+  <li><a href="#chemical-storage" id="toc-chemical-storage" class="nav-link" data-scroll-target="#chemical-storage"><span class="header-section-number">1.10</span> Chemical Storage</a>
+  <ul class="collapse">
+  <li><a href="#hydrogen-energy-storage-system-with-fuel-cell-technology-and-electrolyzer" id="toc-hydrogen-energy-storage-system-with-fuel-cell-technology-and-electrolyzer" class="nav-link" data-scroll-target="#hydrogen-energy-storage-system-with-fuel-cell-technology-and-electrolyzer"><span class="header-section-number">1.10.1</span> Hydrogen Energy Storage System with Fuel Cell Technology and Electrolyzer</a></li>
+  </ul></li>
+  <li><a href="#thermal-storage" id="toc-thermal-storage" class="nav-link" data-scroll-target="#thermal-storage"><span class="header-section-number">1.11</span> Thermal Storage</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">EE600 Week 5 Notes</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Glen Sanabria </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 29, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="energy-storage-technologies" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Energy Storage Technologies</h1>
+<section id="curtailment-managing-oversupply" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="curtailment-managing-oversupply"><span class="header-section-number">1.1</span> Curtailment: Managing Oversupply</h2>
+<ul>
+<li><a href="https://www.greentechmedia.com/articles/read/an-illustrated-guide-to-solar-curtailment-in-california%20https://www.youtube.com/watch?v=L3ixbwh1QZ0&amp;t=16s">Managing Excess Generation in California.</a></li>
+<li>Reducing output from renewables undermines environmental goals</li>
+<li>Meanwhile, traditional power supply <u>must remain online</u> to meet morning ramps or to provide energy if the wind stops flowing or clouds cover solar panels.</li>
+<li><u>Technical and contractual barriers</u> make it difficult to turn generators on &amp; off like a light switch as utilities continuously balance Supply and Deman in Real-Time.</li>
+</ul>
+</section>
+<section id="managing-renewble-energy-over-supply" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="managing-renewble-energy-over-supply"><span class="header-section-number">1.2</span> Managing Renewble Energy Over Supply</h2>
+<ol type="1">
+<li>CAISO Offers <strong>Energy Imbalance Market (EIM)</strong> to other utilities in the Western States.
+<ul>
+<li>This real-time market increases flexibility by allowing access to Clean Energy from one area to be used in another.</li>
+</ul></li>
+<li>Oversupply is also helped by having different types of renewables located across a wide geographic are using <strong>Energy Storage</strong> to capture Excess energy + Adopting <strong>Time of Use Rate</strong> (TOU) to incentivize efficient consumption.</li>
+</ol>
+</section>
+<section id="time-of-use-tou-rate" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="time-of-use-tou-rate"><span class="header-section-number">1.3</span> Time of Use (TOU) Rate</h2>
+<ul>
+<li>The rate you pay for electricity varies depending on the Tim eof day you use it.</li>
+<li>On TOU plans you <strong>pay more</strong> for electricity during <strong>peak hours</strong> when electricity demand is higher, like in the evening when people return home from work.</li>
+<li>To balance for these higher electricity prices, you <strong>pay less</strong> for electricity druing <strong>off-peak hours</strong> such as late at night when people are sleeping and overall demand for electricity is lower.</li>
+<li>You can save money on your electiricy bills by <strong>adjusting your daily electricity consumption</strong> habits such as running your dish washer in the morning instead of right after dinner, or by charging your electric vehicle overnight.</li>
+<li>Under a TOU plan, Solar Power producers’ credit for excess solar electricity sent to the grid vary depending on the time of the day.</li>
+<li>Credit generated during off-peak hours will be worth less than a credit cents of the grid during peak hours.</li>
+<li>Many homeowners with TOU rates consider pairing their solar system with batteries.</li>
+<li>This allows you to store power during peak hours rather than paying for expensive electricity from the grid.</li>
+</ul>
+</section>
+<section id="energy-storage" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="energy-storage"><span class="header-section-number">1.4</span> Energy Storage</h2>
+<ul>
+<li><strong>Energy Storage Move Energy Through Time</strong></li>
+<li>Electricity can be stored <strong>directly</strong> in coils and capacitors.</li>
+<li><strong>Indirect</strong> electrical storage requires electricity to be converted to some form of mechanical, chemical or kinetic energy prior to storage. It then is converted back to electricity at some point in time for use.</li>
+</ul>
+</section>
+<section id="benjamin-franklins-battery" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="benjamin-franklins-battery"><span class="header-section-number">1.5</span> Benjamin Franklin’s Battery</h2>
+<ul>
+<li>In 1749, Benjamin Franklin first used the term “battery” to describe a set of linked capacitors he used for his experiments with electricity.</li>
+<li>These capacitors were panels of glass coated with metal on each surface.</li>
+<li>These capacitors were charged with a static generator and discharged by touching metal to thier electrode.</li>
+<li>Linking them together in a “battery” gave a stronger discharge.</li>
+<li>Originally having the generic meaning of “a group of two or more similar objects functioning together”, as in an artillery battery, of Franklin’s capacitors.</li>
+<li>The term came to be used for voltaic piles and similar devices in which many electrochemical cells were connected together.</li>
+</ul>
+</section>
+<section id="classification-of-energy-storage-technologies-based-on-the-storage-methodology" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="classification-of-energy-storage-technologies-based-on-the-storage-methodology"><span class="header-section-number">1.6</span> Classification of energy storage technologies based on the storage methodology</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="energy_storage_technologies_diagram.png" class="img-fluid figure-img" alt="Energy Storage Technologies Diagram"></p>
+<figcaption>Energy Storage Technologies Diagram</figcaption>
+</figure>
+</div>
+</section>
+<section id="mechanical-storage" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="mechanical-storage"><span class="header-section-number">1.7</span> Mechanical Storage</h2>
+<section id="pumped-hydro-storage-phs" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored" data-anchor-id="pumped-hydro-storage-phs"><span class="header-section-number">1.7.1</span> Pumped Hydro Storage (PHS)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.ferc.gov/industries/hydropower/gen-info/licensing/pump-storage.asp" data-fig-alt="Pumped Storage Projects" data-fig-align="center"><img src="Federal_Energy_Regulatory_Commission_Pumped-Storage_Projects.png" class="img-fluid figure-img" alt="Pumped Storage Projects"></a></p>
+<figcaption>Pumped Storage Projects</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pumped_storage_system.png" class="img-fluid figure-img" alt="Pumped Storage System"></p>
+<figcaption>Pumped Storage System</figcaption>
+</figure>
+</div>
+<p><strong>Notes:</strong> Open-loop systems use a free flowing source of water for either the upper or lower reservoir. For a closed-loop pumped storage hydropower, neither the upper reservoir nor the lower reservoir is located on a dammed stream.</p>
+<section id="pumped-hydro-storage-phs-1" class="level4" data-number="1.7.1.1">
+<h4 data-number="1.7.1.1" class="anchored" data-anchor-id="pumped-hydro-storage-phs-1"><span class="header-section-number">1.7.1.1</span> Pumped Hydro Storage PHS</h4>
+<p><strong>Potential Energy</strong> The potential <strong>theoretical</strong> energy in a volume of elevated water can be calculated as</p>
+<p><span class="math display">\[ E = \rho V g H \]</span> in <em>KW</em></p>
+<p><span class="math display">\[ E = {{\rho V g H} \over 3600} \]</span> in <em>kWh</em></p>
+<p><strong>Power from Falling Water</strong></p>
+<p>The power available from falling water can be expressed as:</p>
+<p><span class="math display">\[ P = \rho gHW \eta \]</span> in <em>kW</em></p>
+<p><em>H</em> is the net head (m).<br>
+<em>V</em> the storage capacity (<span class="math inline">\(m^3\)</span>).<br>
+<em>g</em> is the acceleration due to gravity (<span class="math inline">\(m/s^2\)</span>)<br>
+<span class="math inline">\(\rho\)</span> is the density of the water (<span class="math inline">\(kg/m^3\)</span>)<br>
+<em>E</em> - energy (J)<br>
+<em>Q</em> = flow rate (<span class="math inline">\(m^3/s\)</span>)<br>
+Efficiency <span class="math inline">\(\eta\)</span> = efficiency (generally in the range of 0,.75 to 0.95)<br>
+</p>
+</section>
+</section>
+<section id="large-scale-diabatic-in-ground-compressed-air-energy-storage-caes-system" class="level3" data-number="1.7.2">
+<h3 data-number="1.7.2" class="anchored" data-anchor-id="large-scale-diabatic-in-ground-compressed-air-energy-storage-caes-system"><span class="header-section-number">1.7.2</span> Large-Scale diabatic in-ground Compressed Air Energy Storage (CAES) System</h3>
+<p>[!(compressed_air_energy_storage_system.png)]</p>
+</section>
+<section id="modern-flywheel-energy-storage-fes" class="level3" data-number="1.7.3">
+<h3 data-number="1.7.3" class="anchored" data-anchor-id="modern-flywheel-energy-storage-fes"><span class="header-section-number">1.7.3</span> Modern Flywheel Energy Storage (FES)</h3>
+<p><span class="math display">\[ E_{FES} = {{1}\over2} J_{F} \omega_{mF}^2 \]</span></p>
+<p><span class="math inline">\(E_{FES}\)</span> is the energy stored by the FES system (J), <span class="math inline">\(J_F\)</span> is the moment of inertia (H) of the FES system (electrical machine inertia plus flywheel rotor inertia), <span class="math inline">\(\omega_{mF}\)</span> is the flywheel rotor mechanical speed (rad/s).</p>
+<p>FES systems can be classified into two types: - <strong>Conventional low speed</strong> FES units, which use steel as the flywheel material and rotates below 10,000 rpm - <strong>High-speed</strong> FES units, which use advanced high-strength composite materials for the flywheel, such as carbon-fiber, and rotates up to 100,000 rpm</p>
+<section id="flywheels-turn-superconducting-to-reinvigorate-grid-storage-potential" class="level4" data-number="1.7.3.1">
+<h4 data-number="1.7.3.1" class="anchored" data-anchor-id="flywheels-turn-superconducting-to-reinvigorate-grid-storage-potential"><span class="header-section-number">1.7.3.1</span> Flywheels Turn Superconducting to Reinvigorate Grid Storage Potential</h4>
+<ul>
+<li>The flywheel has fallen off may people’s radar since the industry’s leader, Beacon Power, filed for bankruptcy in 2011.</li>
+<li>The company was revived shortly after, and other competitors joined the market since.</li>
+<li>A flywheel battery stores electric energy by converting it into kinetic energy using a motor to spin a rotor. The motor also works as a generator; the kinetic energy can be converted back to electric energy when needed.</li>
+<li>Early flywheel batteries were bad at storing energy for long periods.</li>
+<li>Flywheels at the time were used more for <strong>short-term energy storage</strong>, providing five-to-ten-minute backup power in data centers.</li>
+</ul>
+</section>
+<section id="overcoming-shortcoming-maky-flywheels-long-term-energy-storage-systems" class="level4" data-number="1.7.3.2">
+<h4 data-number="1.7.3.2" class="anchored" data-anchor-id="overcoming-shortcoming-maky-flywheels-long-term-energy-storage-systems"><span class="header-section-number">1.7.3.2</span> Overcoming Shortcoming: Maky Flywheels Long-term Energy Storage Systems</h4>
+<ul>
+<li>Improvement in <strong>material</strong> to enable high speed spins.</li>
+<li>New generation of motor-generator to <strong>reduce system energy losses</strong>.</li>
+<li>Reduce mechanical energy losses as waste heat by <strong>using passive magnetic bearing</strong> to holed the rotor in equilibrium without using external control that consumes additional energy.</li>
+<li>The use of the high-temperature superconductor (-196 C) as a bearing not only allows the bearing to lift a very heavy rotor (Revterra’s commercial-scale rotor will weigh seven tons) but it also <strong>cuts energy losses</strong> due to the bearing’s inherent ability to trap the magnetic field that holds the rotor in place.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="electrical-storage" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="electrical-storage"><span class="header-section-number">1.8</span> Electrical Storage</h2>
+<section id="super-capacitor-energy-storage-sces" class="level3" data-number="1.8.1">
+<h3 data-number="1.8.1" class="anchored" data-anchor-id="super-capacitor-energy-storage-sces"><span class="header-section-number">1.8.1</span> Super Capacitor Energy Storage (SCES)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="super_capacitor_energy_storage.png" class="img-fluid figure-img" alt="Super Capacitor Energy Storage"></p>
+<figcaption>Super Capacitor Energy Storage (SCES)</figcaption>
+</figure>
+</div>
+<ul>
+<li>Key difference of the super capacitor is its <strong>structure of liquid electrolyte</strong> and <strong>porous electrodes</strong> (activated carbon material), which creates an extremely high specific surface area (hundres of m2/g) compared to the conventional electrode structure.</li>
+<li>Very high capacitance per unit of volume, which can be from <strong>hundreds</strong> to <strong>thousands</strong> times larger than conventional electrolytic capacitors.</li>
+</ul>
+<p><span class="math display">\[ C = \epsilon_0 \epsilon_r {{A}\over D} \]</span></p>
+<p>A is the area of overlap of the two plates, D is the separation between the plates.</p>
+<ul>
+<li><span class="math inline">\(\epsilon_0\)</span> the absolute permittivity of dielectric constant of free space (vacuum, approximately 8.85exp-12 F/m),</li>
+<li><span class="math inline">\(\epsilon_r\)</span> the relative permittivity or dielectric constant of the medium between the two layers,</li>
+</ul>
+<p><span class="math display">\[ E_{SCES} = {{1}\over 2} C_S V^2 \]</span></p>
+</section>
+<section id="superconducting-magnetic-energy-storage-smes" class="level3" data-number="1.8.2">
+<h3 data-number="1.8.2" class="anchored" data-anchor-id="superconducting-magnetic-energy-storage-smes"><span class="header-section-number">1.8.2</span> Superconducting Magnetic Energy Storage (SMES)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="superconductin_magnetic_energy_storage.png" class="img-fluid figure-img" alt="Superconducting Magnetic Energy Storage"></p>
+<figcaption>Superconducting Magnetic Energy Storage (SMES)</figcaption>
+</figure>
+</div>
+<ul>
+<li>Consists of the superconducting coil with its supporting structure and connection components, the cryogenic refrigerating system (cryostat, vacuum pumps, cryogenic refrigerator, tanks, etc.), the electronic power conditioning (conversion) system and the control system.</li>
+<li>Two main superconducting magnet topologies in a SMES system: solenoidal and toroidal.</li>
+</ul>
+</section>
+</section>
+<section id="electrochemical-storage" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="electrochemical-storage"><span class="header-section-number">1.9</span> Electrochemical Storage</h2>
+<section id="lithium-ion-betteries" class="level3" data-number="1.9.1">
+<h3 data-number="1.9.1" class="anchored" data-anchor-id="lithium-ion-betteries"><span class="header-section-number">1.9.1</span> Lithium-Ion Betteries</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lithium-ion_batteries.png" class="img-fluid figure-img" alt="Superconducting Magnetic Energy Storage"></p>
+<figcaption>Lithium-Ion Batteries</figcaption>
+</figure>
+</div>
+<ul>
+<li>The device charges when lithium ions move from a negative electrod to a positive electrode and discharges by the movement of ions in the reverse direction.</li>
+<li>Numerous difference chemistries make up the family of lithium-ion batteries, including but not limited to lithium iron-phosphate, lithium manganese-spinel, and nickel-manganese-cobalt.</li>
+<li>Lithium-ion batteries have a range of power-to-energy ratios depending on the chemistry and specific design of the battery system.</li>
+<li>Compared to other electrochemical energy sotrage technologies, lithium-ion batteries are <strong>energy and power dense.</strong></li>
+<li>Due to their <strong>smaller size</strong> and <strong>low operating and maintenance needs</strong>, the obstacles to implementation are limited.</li>
+<li>Lithium-ion batteries are already commercially available for use in personal electronics and various other applications and are available for use on the electric grid.</li>
+</ul>
+<section id="lithium-ion-battery-and-cobalt" class="level4" data-number="1.9.1.1">
+<h4 data-number="1.9.1.1" class="anchored" data-anchor-id="lithium-ion-battery-and-cobalt"><span class="header-section-number">1.9.1.1</span> Lithium-Ion Battery and Cobalt</h4>
+<ul>
+<li>There is a trend to reduce or eliminate the amount of cobalt in cathodes for ethical and cost reasons.</li>
+<li>Most of the world’s cobalt is mined in the Congo which has been heavily criticized for its unethical and environmentally damging labor and mining practices.</li>
+<li>High cobalt batteries also have lower energy density which is not attractive to the EV sector.</li>
+<li>Shift in industry to NMC and NCA li-ion batteries with smaller proportions of cobalt, and lithium iron phosphate (LFP) cells which contain no cobalt.</li>
+<li>Although LFP cells have lower energy density, they have gained in popularity for use in vehicles and home storage because of their increased safety, and reliance on iron which is more abundant than cobalt.</li>
+</ul>
+</section>
+<section id="why-does-lithium-ion-lead-the-global-energy-storage-race" class="level4" data-number="1.9.1.2">
+<h4 data-number="1.9.1.2" class="anchored" data-anchor-id="why-does-lithium-ion-lead-the-global-energy-storage-race"><span class="header-section-number">1.9.1.2</span> Why Does Lithium-Ion Lead The Global Energy Storage Race?</h4>
+<ul>
+<li>Currently, lithium-ion energy storage systems are maxing out at around four hours.</li>
+<li>It is expected to go out to six or maybe even <strong>eight hours</strong>, but the technology does suffer from diminishing returns and less favorable economics at longer durations.</li>
+<li>Lithium-ion energy storage systesm are well suited to help with <strong>second-to-second</strong> system balancing, renewables ramping and providing peak power services</li>
+<li>Manufacturing at scale has quickly reduced cost and increased the energy density of Li-ion batteries, making long-lasting portable electronic device and EVs possible.</li>
+<li>Expect half the passenger cars sold globally in 2032 to be electric.</li>
+</ul>
+</section>
+<section id="improvements-in-li-ion-technologies" class="level4" data-number="1.9.1.3">
+<h4 data-number="1.9.1.3" class="anchored" data-anchor-id="improvements-in-li-ion-technologies"><span class="header-section-number">1.9.1.3</span> Improvements in Li-ion Technologies</h4>
+<ul>
+<li>Research into Li-ion batteries is focused <strong>on improving energy density</strong>, <strong>size</strong>, and <strong>safety</strong> while <strong>reducing cost</strong>.</li>
+<li>In 2020, Tesla discussed several aspects of improvement including the introduction of silicon to batteries as part of their strategy.</li>
+<li><strong>Solid-state batteries</strong> replace the liquid electrolyte with a solid material.</li>
+<li>This could increase energy density and durability while removing the most flammable element of Li-ion batteries, making them ideal for high-risk applications like pacemakers.</li>
+<li>However, solid-state Li-ion batteries are currently much <strong>more expensive</strong> than traditional liquid-electrolyte batteries.</li>
+</ul>
+</section>
+<section id="new-batteries-beyond-li-ion" class="level4" data-number="1.9.1.4">
+<h4 data-number="1.9.1.4" class="anchored" data-anchor-id="new-batteries-beyond-li-ion"><span class="header-section-number">1.9.1.4</span> New Batteries: Beyond Li-Ion</h4>
+<ul>
+<li>Alternative storage methods for low-cost, long duration storage are coming.</li>
+<li>These include non-battery storage and novel battery chemistries.</li>
+<li>While lithium may be the best battery chemistry for transportation and mobile applications, these new batteries are especially useful for <strong>stationary applications</strong> like grid scale energy storage.</li>
+<li><strong>Flow batteries</strong> are a type of long-duration battery technology that work by flowing an electrolyte through a series of plates.</li>
+<li>The <strong>fluid volume dictates the energy</strong>, and the <strong>electrode plates dictate the power</strong>.</li>
+<li>There are a variety of flow battery startups at various stages of commercialization.</li>
+<li>Notable chemistries are vanadium redox, iron flow, and zinc-based.</li>
+<li>The difficulty with many of these systems is the movement of reactive liquids or liquid/solid slurries which challenge the pumps, valves, and seals needed to move these reactants.</li>
+<li>Compared with lithium-ion batteries flow chemistries also have lower round-trip efficiencies.</li>
+<li>These new battery technologies have yet to overcome their design challenges and demonstrate commercial viability.</li>
+<li>For them to be successful in stationary energy storage, they must first demonstrate that lower USD/kWh installed costs are possible.</li>
+</ul>
+</section>
+<section id="electric-vehicles-and-li-ion" class="level4" data-number="1.9.1.5">
+<h4 data-number="1.9.1.5" class="anchored" data-anchor-id="electric-vehicles-and-li-ion"><span class="header-section-number">1.9.1.5</span> Electric Vehicles and Li-ion</h4>
+<ul>
+<li>It is unlikely that EVs will move away from Li-ion battery technology in the foreseeable future.</li>
+<li>The energy density of Li-Ion batteries align well with mileage needs and notable advancements, like solid electrolyte designs and the adoption of new anode chemistries, are coming to production.</li>
+<li>Expect EV adoption to increase as costs continue to fall and vehicle range is extended.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="chemical-storage" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="chemical-storage"><span class="header-section-number">1.10</span> Chemical Storage</h2>
+<section id="hydrogen-energy-storage-system-with-fuel-cell-technology-and-electrolyzer" class="level3" data-number="1.10.1">
+<h3 data-number="1.10.1" class="anchored" data-anchor-id="hydrogen-energy-storage-system-with-fuel-cell-technology-and-electrolyzer"><span class="header-section-number">1.10.1</span> Hydrogen Energy Storage System with Fuel Cell Technology and Electrolyzer</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="hydrogen_energy_storage_system_with_fuel_cell_technology_and_electrolyzer.png" class="img-fluid figure-img" alt="Hydrogen Energy Storage System with Fuel Cell Technology and Electrolyzer"></p>
+<figcaption>Hydrogen Energy Storage System with Fuel Cell Technology and Electrolyzer</figcaption>
+</figure>
+</div>
+<ul>
+<li>Fuel cells work like batteries, but they do not run down or need recharging.</li>
+<li>They produce electricity and heat as long as fuel is supplied.</li>
+<li>A fuel cell consists of an anode and a cathode sandwiched around an electrolyte.</li>
+<li>In a hydrogen fuel cell, a catalyst at the anode separates hydrogen molecules into protons and electrons, which take different paths to the cathode.</li>
+<li>The electrons go through an external circuit, creating a flow of electricity.</li>
+<li>The protons migrate through the electrolyte to the cathode, where they unite with oxygen and the electrons to produce water and heat.</li>
+</ul>
+<section id="coating-offshore-wind-and-green-hydrogen-production" class="level4" data-number="1.10.1.1">
+<h4 data-number="1.10.1.1" class="anchored" data-anchor-id="coating-offshore-wind-and-green-hydrogen-production"><span class="header-section-number">1.10.1.1</span> Coating Offshore Wind and Green Hydrogen Production</h4>
+<ul>
+<li>Green hydrogen produced offshore, in which electrolyzers are powered by offshore wind.</li>
+<li>Falling costs of offshore wind and electrolyzers would improve the economics of such projects.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="thermal-storage" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="thermal-storage"><span class="header-section-number">1.11</span> Thermal Storage</h2>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/Glensana\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
