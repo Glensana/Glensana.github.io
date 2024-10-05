@@ -8,6 +8,153 @@ format:
         number-sections: true
 author: Glen Sanabria
 ---
+
 # IBR and Variable Speed Generation
 
 ## Synchronous Machine
+
+-   Sinusoidally distributed balanced $3\phi$ stator windings
+-   The Rotor field winding is energized with DC Current $I_f$
+-   The Field $B_f$ rotates synchronously with the rotor at speed $\omega$:
+    -   Induces sinewave voltages in stator windings
+
+### Synchronous Machine Operation
+
+-   Ideal cylindirical-rotor machine connected to an infinite bus.
+-   The infinite bus represents a busbar of constant voltage, which can deliver or absorb active and reactive power without any limitations.
+-   The ideal machine has zero resistance and leakage reactance, infinite permeability, and no saturation, as well as zero reluctance torque.
+-   **The production of torque in the synchronous machine results from the natural tendency of two magnetic fields to align themselves.**
+-   The magnetic field produced by the stationary armature is denoted as $\phi_s$.
+-   The magnetic field produced by the rotating field is $\phi_f$.
+-   The resultant magnetic field is $$ \phi_r = \phi_s + \phi_f $$
+
+## Basic Induction Machines
+
+-   Sinusoidally distributed balanced $3\phi$ stator windings
+-   Rotor speed is generally non-synchronous:
+    -   Rotor can turn faster (generator) or slower (Motor) than input frequency
+-   **Would Rotors**
+    -   Rotor windings brought out through sliprings. Allowing speed/torque control.
+-   **Squirrel-Cage Rotors**
+    -   Rotor windings are simple, shorted bars, cast inot rotor laminations.
+    -   Low-cost, Rugged, commercial/industrial work-horse
+    -   First Wind Turbines
+
+## Frequency, Voltage, and Generator Speed
+
+-   $$ \text{Generator Frequency } (f) = {{\text{Number of revolutions pwer minutes } (N) * \text{Number of Magnetic Poles } (P)} \over 120}$$
+
+$$ f = {{NP} \over 120} $$
+
+-   **The main factors affecting the generator voltage**
+    -   Number of turns of the stator windings
+    -   The strength of the magnetic field
+    -   The rotational speed of the rotor.
+    -   The output load of the alternator.
+    -   The Impedance of the load.
+
+V controlled by excitation\
+F controlled by speed of rotation
+
+120 is a constant to allow for the conversion of minutes to seconds and from poles to pairs of poles.
+
+## Why Variable Speed?
+
+-   Wind turbine speed is adjusted as a function of wind speed to maximize output power.
+-   Operation at the maximum power point can be realized over a wide power range.
+-   Small hydro turbines power output is also maximized using variable speed generation.
+
+## MPPT and Variable Speed Systems
+
+-   Electrical output power as a function of turbine speed parameter curves are plotted for different wind speeds.
+-   **Maximum Power Point Tracking** (red curve) can be realized with a variable speed system.
+
+![Maximum Power Point Tracking](turbine_speed_vs_electrical_power.png){fig-alt="Maximum Power Point Tracking" fig-align="center"}
+
+## Electric Generators
+
+![Electric Generator Types](electric_generator_types.png){fig-alt="Electric Generator Types" fig-align="center"}
+
+Types 1-3 are induction generators and must have gearboxes to change "slow" rotor rotational speed (5-20 rpm) to "fast" generator rotational speed (750-3600 rpm) needed by the 60 Hz grid freq seen in stator winding.
+
+Type 4 maintains generator at "slow" rotor rotational speed producing low freq in stator winding which is transformed by converter to grid. Also called "direct-drive." Usually uses a PM synchronous generator.
+
+### Fixed Speed Wind Turbine - Type 1
+![Type 1](type_1.png){fig-alt="Type 1" fig-align="center"}
+- Fixed Speed - limited control of slip (2-3%) and Real Power
+- Consumes VARs
+- The wind turbine rotor blades may be pitch-regulated to control power.
+
+### Limited Variable Speed Wind Turbine - Type 2
+![Type 2](type_2.png){fig-alt="Type 2" fig-align="center"}
+- Variable Speed - More Control of Slip (up to 10%)
+- Consumes VARs
+- Variable Rotor Resistance via slip rings with wound rotor IG.
+
+### Variable-Speed Wind Turbines with Partial-Scale Power Converter - Type 3
+![Type 3](type_3.png){fig-alt="Type 3" fig-align="center"}
+- Variable Speed - More control of slip (up to 50%)
+- Can Control VARs
+- Partial Scale Converters Required (~30% of Machine)
+
+### Variable-Speed Wind Turbines with Full-Scale Power Converter - Type 4
+![Type 4](type_4.png){fig-alt="Type 4" fig-align="center"}
+
+An opportunity to eliminate the gearbox exists. Since wild AC from generator can be conditioned to 60 HZ grid. 
+
+Machine's excitation can be controlled by machine side converter- Can use any type of machine, field wound SG, PM-SG or IG
+
+- Variable Speed - Wide control of slip (up to 100%)
+- Can control VARs
+- Full Scale Converters Required (>100% of Machine)
+
+## Inverter Systems
+
+### Power Electronics Role in Modern Power Systems
+- Power conversion and conditioning
+- **DC to AC** for **PV**
+- **AC-DC-AC** conversion for Wind Systems
+- Power control for **maximum power**
+- Ensuring grid interconnect requirements
+- Grid support and mimicking conventional generator characteristics (**inertia**)
+- 'Smart grid' functions
+- FACTS (flexible ac trnamission system) and other power control devices in tranmission systems
+- Interface for various types of energy storage, including electric vehicles as storage (V2G)
+
+# Achieving a 100% Renewable Grid (Notes)
+
+## Dealing with Variability and Uncertainty
+- Variable Renewable Energy (VRE) such as wind and solar photovoltaic (PV). Wind and solar have variable and uncertian power output determined by local weather conditions.
+- Many factors required greater grid flexibility to accomodate the for more VRE
+- PV power has a natural diurnal cycle and it does not produce at night. Leading to larger net load ramps than might otherwise be seen in the evenings. 
+- Wind as a less pronounced diurnal cycle. In the US it produces more power at night or during large changes of weather conditions in large geographic areas.
+- Both can combines to produce too much energy during a single surge and curtailment of these must be perfomed.
+- "Curtailment decisions rely on a complex set of variables, including the flexibility of the remaining generation fleet."
+
+- Solutions to VRE limitations include:
+    - "smoothing of overall VRE power output through sufficient ammounts of geographic diversity when siting the VRE generators"
+    - "expansion of the transmission system to be able to move large amounts of power more efficiently from regions where VRE generators are currently producing to the areas where load is currently needed."
+
+"Technology that allows temporal shifting of VRE is energy storage."
+
+Energy storage can shift power from times when it mithg otherwise be curtailed to times when the power output from VRE is lower.
+
+Multiple power storage technologies:
+- pumped hydropower fleet
+- compressed aire energy storage systems
+- various battery technologies
+
+Demand-response technologies by shifting load demand to where it's necessary.
+
+New loads that have flexibility can play a similar role.
+
+"Characterizing or reducing uncertainty associated with VRE output or load enables a more efficient utilization of the entire power system"
+
+
+
+# Homework 
+Use the Reading References in this section to answer **TWO** questions below:
+
+1. Review the technologies needed to allow for more renewable energy resources to be integrated to the power grid.
+2. Discuss the different approaches to maintain grid inertia with high penetration of renewable eneryg resources.
+
