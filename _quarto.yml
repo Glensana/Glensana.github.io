@@ -3,18 +3,18 @@ project:
 
 website:
   title: "University Notes"
+  page-navigation: true
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
       - Clarkson/clarkson_university.qmd
+    logo: graduation_cap.jpg
 
 format:
   html:
-    theme: darkly
+    theme: lux
     css: styles.css
     toc: true
-
-
-
+    smooth-scroll: true

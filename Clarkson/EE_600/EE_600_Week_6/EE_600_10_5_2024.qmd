@@ -6,7 +6,6 @@ format:
         toc: true
         toc-location: right
         number-sections: true
-        theme: darkly
 author: Glen Sanabria
 ---
 # IBR and Variable Speed Generation
