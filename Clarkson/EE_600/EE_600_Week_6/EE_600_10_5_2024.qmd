@@ -1,0 +1,14 @@
+---
+title: EE600 Week 6 Notes
+date: 10/5/2024
+format: 
+    html:
+        toc: true
+        toc-location: right
+        number-sections: true
+        theme: darkly
+author: Glen Sanabria
+---
+# IBR and Variable Speed Generation
+
+## Synchronous Machine

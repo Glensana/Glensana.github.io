@@ -1,0 +1,22 @@
+---
+title: EE 600 - Disruptive Technologies
+format: 
+    html:
+        toc: true
+        toc-location: right
+        theme: darkly
+author: Glen Sanabria
+---
+
+# Weekly Topics
+## Week 1: Introduction
+
+## [Week 2: Introduction to Solar Energy](/Clarkson/EE_600/EE_600_Week_2/EE600_9_8_2024.qmd)
+
+## [Week 3: The Rise of DER and the Microgrid](/Clarkson/EE_600/EE_600_Week_3/EE600_notes_9_14_2024.qmd)
+
+## Week 4: Offshore Wind Energy
+
+## [Week 5: Grid-Scale Energy Storage](/Clarkson/EE_600/EE_600_Week_5/EE_600_notes_9_29_2024.qmd)
+
+## Week 6: From Synchronous Generators to IBRs

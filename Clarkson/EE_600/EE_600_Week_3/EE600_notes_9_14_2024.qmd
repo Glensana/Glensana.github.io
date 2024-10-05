@@ -1,0 +1,315 @@
+---
+title: EE600 Week 3 Notes
+date: 9/14/2024
+format: 
+    html:
+        toc: true
+        toc-location: right
+        number-sections: true
+        theme: darkly
+author: Glen Sanabria
+---
+
+# Renewable Energy and the Power Grid
+
+## Grid of the Future: Key Trends
+
+-   Coal Plant Retirements
+-   Low-cost Wind and Solar Power
+-   Offshore Wind
+-   Electric Vehicles
+-   Energy Storage
+-   Distributed Generation and Microgrids
+-   Grid-Forming Inverters
+-   Management of Distributed Solar Power
+-   Dynamic Reactive Power Sources
+-   Smart Grid and Demand Management
+-   Maintaining Grid Resiliency with Microgrids
+
+## Challenges with Widespread Use of Renewable Resources
+
+-   Cost
+
+-   Capacity factor
+
+-   Intermittency and uncertainty
+
+-   Resources far from load centers
+
+-   Mismatch between peak generation and peak load
+
+-   Grid reliability under high penetration
+
+-   Lack of utility scale storage
+
+## 
+
+## Characteristics of Power from Variable RE Sources, Potential Grid Integration Challenges, and Mitigation Options
+
+| Wind and Solar | Characteristics | Potential Grid Integration Challenges | Mitigation Options |
+|-----------------|-----------------|-----------------|----------------------|
+| Variability | Generator output can vary as underlying resource fluctuates. | Balancing generation with electricity load requires more flexibility. | In many power systems, sufficient flexibility exists to integrate additional variability, but this flexibility may not be fully accessible without changes to power system operation or other institutional factors (e.g., increased ramping of generation and improved coordintion across markets and balancing areas) |
+| Uncertainty | Generation cannot be predicted with perfect accuracy (day-ahead, day of) | System operators could need additional reserves and/or an improved ability to dispatch generation. | Integration of advanced renewable supply forecasting into dispatch and market operations has reduced uncertainties, improved scheduling of other resources to reduce reserves and fuel consumption, and enabled variable RE to participate as dispatchable resources. |
+| Location-specificity | Generation is more economical where highest quality resources are available. | More transmission and more advanced planning could be needed. | Competitive Renewable Energy Zones (CREZ) in Texas are an example of an approach to quickly develop generation and transmission in coordination (18.5 GW - 2,6000 miles - completed nine years after CREZ legislation was signed), to access wind resources in remote parts of the state. |
+| Non-synchronous generation | Generators provide voltage support and frequency control in a different manner than traditional resources. | Voltage and frequency stability from variable RE generators or additional equipment comes at added capital and/or opportunity costs. | Grid code requirements are evolving in response to technological advances and anticipation of high RE penetration levels. For example, ERCOT, which is a small interconnection and more vulnerable to frequency excursions, now requires wind generators to provide inertial response, which helps keep a system stable in the initial moments after a disturbance. |
+| Low capacity factor | Availability of the underlying energy resource limits the run-time of the plant | Existing conventional generators could be needed to meet demand, but run less than originally anticipated, affecting cost recovery. | Capacity payments or markets, potentially tied to flexible performance, could ensure sufficient cost recovery. The potential for stranded assets is not unique to variable RE, and can occur whenever generation with lower marginal costs have reduced the market competitiveness of nuclear plants, contributing to recent retirements. |
+
+## Intermittency and Uncertainty of Wind & Solar Power
+
+Variable and uncertain power output determined by local weather conditions.
+
+Conventional generators, such as coal and gas plants, are considered dispatchable because they can more easily change their power output (both up and down) to meet changes in load.
+
+PV power has a natural challenge associated wit hits diurnal cycle.
+
+**This makes the power output between individual PV generators very well correlated, with large amounts of energy in relatively small windows of time.**
+
+Wind energy also has a diurnal cycle. In many locations within the United States, there tends to be **more wind energy produced during nighttime hours than during daytime hours.**
+
+There can be times when there is too much supply, and the curtailment makes sense for economic or reliability reasons.
+
+Requires greater grid flexibility to accommodate the changes in generation.
+
+## Capacity Factor
+
+-   Capacity factors measure how intensively a generating unit runs
+
+-   It is a measure of how much energy is produced by a plant compared to its maximum output.
+
+-   A capacity factor of 100% means a generating unit is operating all the time.
+
+-   It may also be expressed as the ratio of average output to maximum output over a year.
+
+## Capacity Factor Calculations
+
+### Baseload Power Plant
+
+-   **1000 MW** capacity, produces **648,000 MWh** in 30 days a month.
+
+-   **The number of MWhs that could have been produced had the plant been operating at full capacity** = 1000MW X 30 days X 24 hours/day = **720,000.**
+
+$$
+648,000 MW*h \over {(30 days) * (24 hours/day) * (1000 MW)} = 0.9 \approx 90%
+$$
+
+## Reasons for Reduced Capacity Factor Base Load, Peak Load, and Renewables
+
+-   **Out of service or operating at reduced output for part of the time due to equipment failure or routine maintenance.**
+
+    -   Base load plants have lowest costs per unit of electricity because they are designed for maximum efficiency and operating continuously at high output
+
+    -   Geothermal, nuclear, coal, bioenergy plants burn solid material —- always operate as baseload.
+
+-   **Output is curtailed because electricity is not needed or because price of electricity is too low to make production economical.**
+
+    -   Peaking power plants. Operate for only few hours. Their electricity is relatively expensive
+
+-   **Wind farms are variable, due to the natural variability of the wind.**
+
+    -   For a wind farm, the capacity factor is mostly determined by the availability of wind. Transmission line capacity and electricity demand also affect the capacity factor.
+
+-   **Solar energy is variable because of the daily rotation of the earth, seasonal changes, and because of cloud cover.**
+
+## Non-Synchronus Generation
+
+### Inverter-Based Distributed Grid
+
+Grid of the future will have many more **inverter-based** generators and be much more **distributed** than the current power system, which is dominated by central-station synchronous generators.
+
+## Synchronous Generation Characteritics
+
+### Frequency, Voltage, and Inertia
+
+-   The **system frequency** and **voltages** are tightly regulated through a combination of fast-acting closed-loop controller at each machine.
+
+-   The turbine system and **rotating components** inside each machine exhibit **mechanical inertia,** capable of **storing kinetic energy in this rotating mass.**
+
+-   **Energy** can be extracted or absorbed into these rotating masses during **system disturbances**, an interconnected system of machines is able to withstand fluctuations in net load and generation.
+
+    -   A net excess, or deficiency, in generation delivers energy into, or extracts energy from, the rotating masses and subsequently leads to an increased, or decreased, system frequency.
+
+## Fault Ride Through
+
+Unitl about 2003, DFIGs, like fixed-speed WTGs, were unable to ride through faults causing the wind farm terminal voltage to fall below about 70% of the nominal voltage.
+
+## Capability for Grid Stability
+
+-   Inertia
+
+-   Active Power Control
+
+-   Reactive Power Control
+
+-   Fault Ride Through
+
+## Operating Reserve and VRE
+
+-   VRE is capable of providing any type of operating reserves;
+
+-   However, the challenge is that **accurate resource forecasts** are needed at different time horizons to ensure the availability of such reserves from wind and solar generation.
+
+-   **Energy storage** can also be used to provide additional reserves and help correct possible imbalances due to forecast errors.
+
+## Current Status
+
+-   Grid Friendly Wind and Solar Plants
+
+    -   Fault-ride through
+
+    -   Voltage regulation
+
+    -   Primary Frequency Response
+
+    -   Synthetic Inertia
+
+-   Superior Operation
+
+    -   Hugely improved forecasting (fewer surprises)
+
+    -   Situational awareness; avoided risks
+
+-   Local and selective transmission
+
+# Microgrid Systems
+
+## The Traditional Electric Grid
+
+### Traditional Structure
+
+-   **Power production** in central generating stations
+
+-   **Delivery** to the points of end use via **transmission** and **distribution** systems.
+
+## The Structure of the Traditional Electricity System
+
+# Resources (Microgrid Evolution Solutions)
+
+## Toward a Global Green Smart Microgrid
+
+-   Distributed generation has some disadvantages, such as poor controllability and strong volatility, which make renewable energy generation unable to provide stable outputs, such that the penetration rate of renewable energy is limited.
+
+-   **Microgrid**
+
+    -   proposed to increase the controllability and mitigate the uncertainty of distributed energy resources
+
+    -   can operate in two ways: the off-grid and grid-connected modes
+
+    -   equivalent to a single controlled unit from the viewpoint of the power grid, which can provide power grid support, improve energy efficiency, save energy, and reduce consumption
+
+    -   for the users, it can meet the power supply safety and power quality requirements
+
+-   
+
+-   
+
+### Recovery and Resiliency
+
+-   In a microgrid that operates in on-grid mode, when the electrical equipment in the microgrid goes wrong, it should be ensured that the microgrid can continue operating safely and steadily after the fault device is cut off.
+
+-   On the premise of reliable location and removal of the fault device, the microgid should continue operating reliably after being disconnected from the distribution system when a fault occurs in the distribution system.
+
+-   The protection includes two aspects internal protection of the microgrid and the tie line protection.
+
+    -   Internal protection of the microgrid means that when a fault occurs within the microgrid, the proteciton system can quickly identify, locate, and cut off the fault, thereby ensuring the safe and stable operation.
+
+-   internal protection strategy
+
+    -   low-voltage protection strategy is mainly used when the microgrid operates in the off-grid mode because it can deal with the low-short-circuit capacity brought by the off-grid operation. It is suitable for a microgrid that can be divided into multiple protection areas, and each protection area is composed of a DG and load that can achieve power balance.
+
+    -   current-differential protection strategy can be used in both the on-grid and off grid modes, and it is mainly used to protect the feeders in the microgrid. It needs to install current transformers at both ends of each feeder to measure the current through the two ends of the line. It compares the measurements of both ends of the feeders.
+
+-   tie line protection strategy
+
+    -   determine if the microgrid operates in off-grid or on-grid mode
+
+    -   determine the microgrid protection strategy
+
+### Off-Grid Mode
+
+-   Characteristics of off-grid mode:
+
+    -   load is supplied by DGs
+
+    -   independent microgrid is separated from the distribution system
+
+    -   it can continue to operate without the power provided by the distribution system.
+
+    -   The voltage and frequency remain within the allowable range.
+
+-   There are two control methods: master-slave control and peer-to-peer control (droop control)
+
+    -   Master-slave control refers to the fact that, when the microgrid operates in off-grid mode, it is necessary to choose a DG from the microgrid as the master power source, and the master power source should maintain the voltage and frequency stability of the microgrid.
+
+    -   droop control is a DG inverter control method that enables the output of the DGs to be automatically distributed according to their droop characteristics. Through the specific design of the logical control strategies, the DG inverter can obtain the static droop characteristics.
+
+# Homework 3
+
+Use the reference in the resources to answer the following questions:
+
+1.  Currently, microgrid technology is one of the key methods for improving the capability and flexibility of DER penetration. Explain how the proposed microgrid design discussed in the article is helping to:
+
+    (a) increase the "controllability"
+
+        Increase control by using a modular design in which it can be separated into sections. The use of a EMS that gathers data from the multiple inputs and outputs of the grid allows for high level of control. The EMS leverage big data, AI, and cloud resources achieve it's control
+
+    (b) mitigate DER (distributed energy resources) "uncertainty"
+
+        It mitigates uncertainty by having a robust monitoring system with multiple methods of generation to reduce the "uncertainty" of power. With a combination of sensors providing both historical and real-time data, the EMS can adjust distribution of loads and generation to provide optimal performance. The microgrid can be connected to the grid in an event the DGs in the microgrid cannot enough power to provide for the loads and if it over-produces, it can sell it to the larger grid.
+
+    (c) reduce negative impact on "grid stability"
+
+        It can reduce the negative impact by having EMS perform fault detection and adjust loads on the microgrid and isolating faults in the microgrid. If the fault is from outside the grid, it can isolate itself and run off the power generated by the DGs in the microgrid.
+
+2.  How can a microgrid system provide:
+
+    (a) power grid support
+
+        If the power produced by the DGs in the microgrid is large, it can sell the overproduced energy back to the power grid and provide support.
+
+    (b) improve energy efficiency
+
+        Through the use of energy-management systems (EMS), which leverage big data, cloud computing, and AI, it can realize the whole lifecycle operation management, resulting in an increase in efficiency of energy utilization of 3%.
+
+    (c) save energy
+
+        By reducing consumption?
+
+    (d) reduce consumption
+
+        By leveraging the ability of grid-connected and off-grid modes and the use of EMS to control PV power generation, energy-storage, and adjustable loads, it can achieve benefits by:
+
+        (a) reducing system capacity and basic electricity price by adjusting the PV system and energy-storage system
+
+        (b) participating in peak load shaving through the energy-storage system
+
+        (c) Through energy optimal dispatching, making full use of the renewable energy for power generation
+
+3.  How DG (distributed generators) plus energy storage systems have changed the characteristics of:
+
+    (a) power system faults
+
+        There power system faults from the grid connected and now there is faults that may happen within the microgrid. These can be segregated and identification of fault location is possible with multiple methods, especially within the microgrid.
+
+    (b) power system fault detection methods
+
+        Through the low-voltage protection strategy, a microgrid that can be divided into multiple protection areas where each area is composed of a DG and load that can achieve power balance. When there's a fault, the protection mechanism of the DG inverter runs, and the fault current can be limited to less than twice the rated output current. To protect the microgrid, monitoring the drop of the DG output terminal voltage can be done.
+
+        With transformers install at both ends of each feeder to measure the current, a differential relay compares the measurements of both ends of the feeders. When there is a fault on the feeder, the differential relay measures a large unbalanced current. The circuit breaker at both ends of the feeder operates immediately, and the feeder is cut off from the microgrid.
+
+        For the tie line protection strategy, judging the location of the fault is achieved through the negative-sequence power direction component and the direction element with memory to determine whether the fault occurs on the distribution network, con the contact line, or within the microgrid. When in on-grid operation and a fault occurs in the microgrid, a large fault current is detected.
+
+    (c) power system protection
+
+        The power flow may have two directions because many DGs in the microgrid and distribution network together from a multigeneration power system, and the microgrid operator can choose to buy or transmit the electrical power from the distribution network, resulting in a change of power flow direction. In off-grid mode, there may be bidirectional power flow due to the differences in the power balance between the DGs and distributed storage.
+
+        In the two microgrid operation modes, the short circuit current performs different values. In the off-grid mode, due to the protection of inverters, the short-circuit current is small.
+
+        Traditional protection methods cannot meet the requirements of microgrids, and it is necessary to design a fault-treatment method suitable for the microgrid.
+
+4.  What are the benefits of (a) off-grid, and (b) grid-connected, operation modes of microgrid?
+
+The benefits of off-grid operation are mainly cost savings and protection. By operating off-grid the microgrid avoid issues that may cause damage if it were connected to the rest of the grid.
+
+The benefits of grid-connected operation is that it has access to more power in an event that DER in the microgrid cannot supply enough power.
+
+With regards to cost, it can produce enough power that it can sell the power to the grid

@@ -2,16 +2,17 @@ project:
   type: website
 
 website:
-  title: "Glensana.github.io"
+  title: "University Notes"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - Clarkson/clarkson_university.qmd
 
 format:
   html:
-    theme: cosmo
+    theme: darkly
     css: styles.css
     toc: true
 

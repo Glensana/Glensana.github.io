@@ -1,7 +1,25 @@
 ---
-title: "Glensana.github.io"
+title: "University Notes"
 ---
 
 This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+# Universidad de Puerto Rico - Humacao
+
+# Universidad de Puerto Rico - Mayagüez
+
+# Clarkson University ME Masters
+
+## Clarkson Courses
+
+### ME 502 - Engineering Analysis
+
+### ME 500 - Elasticity
+
+### ME 574 - Numerical Heat Transfer & Fluid Flow
+
+### ME 533 - Additive Manufacturing
+
+### ME 583 - Turbine Engineering
+
+### [EE 600 - Disruptive Technology](/Clarkson/EE_600/EE_600.qmd)
