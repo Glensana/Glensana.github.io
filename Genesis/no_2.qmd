@@ -1,5 +1,9 @@
-## WILL YOU BE MY VALENTINE?
 
+![](../giphy.gif){fig-align="center"}
+
+# OK, Second try!
+
+## WILL YOU BE MY VALENTINE?
 
 [YES](/Genesis/yes.qmd){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="YES"}
 

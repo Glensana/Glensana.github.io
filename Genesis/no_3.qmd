@@ -1,4 +1,8 @@
+# Sorry but "NO" is ...
+
+![](../nick_fury_not_an_option.gif){fig-align="center"}
+
+## Ok, one final time,
 ## WILL YOU BE MY VALENTINE?
 
-
-[YES](/Genesis/yes.qmd){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="YES"}
+[YES!](/Genesis/yes.qmd){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="YES"}

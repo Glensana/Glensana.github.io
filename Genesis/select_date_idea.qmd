@@ -1,0 +1,35 @@
+---
+title: Please select a date idea for Saturday, February 15
+---
+# Dinner
+
+- [ ] Sushi
+- [ ] Ramen
+- [ ] Pasta
+- [ ] Pizza
+- [ ] Mofongo
+- [ ] Steak
+
+# Drink
+
+- [ ] Champagne
+- [ ] Wine
+- [ ] Gin
+- [ ] Rum
+- [ ] Boba Tea
+
+# Dessert
+
+- [ ] Ice Cream
+- [ ] Donuts
+- [ ] Cake
+- [ ] Cupcake
+- [ ] Macaroon
+- [ ] Strawberry with Chocolate
+
+# Activity
+
+
+# When you have finish selecting your options, click the "DONE" button below, please!
+
+[DONE!](/Genesis/select_date_idea.qmd){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="CONTINUE"}
