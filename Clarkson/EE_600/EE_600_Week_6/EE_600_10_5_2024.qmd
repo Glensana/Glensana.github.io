@@ -193,11 +193,21 @@ Smart Grid Technologies: The adoption of smart grid technologies, including adva
 
 ## From Reading 2
 
-1. Review the technologies needed to allow for more renewable energy resources to be integrated to the power grid.
-
-
-
-
-
-
 2. Discuss the different approaches to maintain grid inertia with high penetration of renewable energy resources.
+
+- ERCOT (Texas Grid) has historically relied on **loads** as a source of frequency response (called "load resources"). Equipping certain large industrial loads with snesors that measure frequency and are programmed to disconnect automatically when the frequency drops to a certain level.
+- The use of **loads** as a source of frequency response allows ERCOT to maintain frequency while providing other benefits, such as potentially more efficient system operation.
+
+- Summary of Options to Maintain Frequency Stability
+    - Maintain Inertia
+        - **System operation**
+        - **Synchronous renewable energy**
+        - **Synchronous condensers**
+    - Provide More Response Time
+        - **Reduced contingency size**
+        - **Reduced UFLS (underfrequency load shedding) settings**
+    - Fast Frequency Response
+        - **Load**
+        - **Extracted wind kinetic energy**
+        - **Dispatch of inverter-based resources**
+        - **Additional or enhanced primary frequency response**

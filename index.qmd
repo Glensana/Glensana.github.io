@@ -1,25 +1,11 @@
----
-title: "University Notes"
----
+Hello baby!
 
-This is a Quarto website.
+I know I'm a little late but,
 
-# Universidad de Puerto Rico - Humacao
+<center>
+<div class="tenor-gif-embed" data-postid="20366214" data-share-method="host" data-aspect-ratio="1.06312" data-width="100%"><a href="https://tenor.com/view/milk-and-mocha-love-heart-cute-bear-gif-20366214">Milk And Mocha Love GIF</a>from <a href="https://tenor.com/search/milk+and+mocha-gifs">Milk And Mocha GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+</center>
 
-# Universidad de Puerto Rico - Mayagüez
+<a href="/Genesis/yes.qmd"><button>YES</button></a>
 
-# Clarkson University ME Masters
-
-## Clarkson Courses
-
-### ME 502 - Engineering Analysis
-
-### ME 500 - Elasticity
-
-### ME 574 - Numerical Heat Transfer & Fluid Flow
-
-### ME 533 - Additive Manufacturing
-
-### ME 583 - Turbine Engineering
-
-### [EE 600 - Disruptive Technology](/Clarkson/EE_600/EE_600.qmd)
+<a href="/Genesis/no_1.qmd"><button>NO :(</button></a>
