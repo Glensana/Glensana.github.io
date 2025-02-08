@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,7 +68,37 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -80,6 +110,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../graduation_cap.jpg" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">University Notes</span>
     </a>
@@ -120,7 +153,37 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#ibr-and-variable-speed-generation" id="toc-ibr-and-variable-speed-generation" class="nav-link active" data-scroll-target="#ibr-and-variable-speed-generation"><span class="header-section-number">1</span> IBR and Variable Speed Generation</a>
   <ul class="collapse">
-  <li><a href="#synchronous-machine" id="toc-synchronous-machine" class="nav-link" data-scroll-target="#synchronous-machine"><span class="header-section-number">1.1</span> Synchronous Machine</a></li>
+  <li><a href="#synchronous-machine" id="toc-synchronous-machine" class="nav-link" data-scroll-target="#synchronous-machine"><span class="header-section-number">1.1</span> Synchronous Machine</a>
+  <ul class="collapse">
+  <li><a href="#synchronous-machine-operation" id="toc-synchronous-machine-operation" class="nav-link" data-scroll-target="#synchronous-machine-operation"><span class="header-section-number">1.1.1</span> Synchronous Machine Operation</a></li>
+  </ul></li>
+  <li><a href="#basic-induction-machines" id="toc-basic-induction-machines" class="nav-link" data-scroll-target="#basic-induction-machines"><span class="header-section-number">1.2</span> Basic Induction Machines</a></li>
+  <li><a href="#frequency-voltage-and-generator-speed" id="toc-frequency-voltage-and-generator-speed" class="nav-link" data-scroll-target="#frequency-voltage-and-generator-speed"><span class="header-section-number">1.3</span> Frequency, Voltage, and Generator Speed</a></li>
+  <li><a href="#why-variable-speed" id="toc-why-variable-speed" class="nav-link" data-scroll-target="#why-variable-speed"><span class="header-section-number">1.4</span> Why Variable Speed?</a></li>
+  <li><a href="#mppt-and-variable-speed-systems" id="toc-mppt-and-variable-speed-systems" class="nav-link" data-scroll-target="#mppt-and-variable-speed-systems"><span class="header-section-number">1.5</span> MPPT and Variable Speed Systems</a></li>
+  <li><a href="#electric-generators" id="toc-electric-generators" class="nav-link" data-scroll-target="#electric-generators"><span class="header-section-number">1.6</span> Electric Generators</a>
+  <ul class="collapse">
+  <li><a href="#fixed-speed-wind-turbine---type-1" id="toc-fixed-speed-wind-turbine---type-1" class="nav-link" data-scroll-target="#fixed-speed-wind-turbine---type-1"><span class="header-section-number">1.6.1</span> Fixed Speed Wind Turbine - Type 1</a></li>
+  <li><a href="#limited-variable-speed-wind-turbine---type-2" id="toc-limited-variable-speed-wind-turbine---type-2" class="nav-link" data-scroll-target="#limited-variable-speed-wind-turbine---type-2"><span class="header-section-number">1.6.2</span> Limited Variable Speed Wind Turbine - Type 2</a></li>
+  <li><a href="#variable-speed-wind-turbines-with-partial-scale-power-converter---type-3" id="toc-variable-speed-wind-turbines-with-partial-scale-power-converter---type-3" class="nav-link" data-scroll-target="#variable-speed-wind-turbines-with-partial-scale-power-converter---type-3"><span class="header-section-number">1.6.3</span> Variable-Speed Wind Turbines with Partial-Scale Power Converter - Type 3</a></li>
+  <li><a href="#variable-speed-wind-turbines-with-full-scale-power-converter---type-4" id="toc-variable-speed-wind-turbines-with-full-scale-power-converter---type-4" class="nav-link" data-scroll-target="#variable-speed-wind-turbines-with-full-scale-power-converter---type-4"><span class="header-section-number">1.6.4</span> Variable-Speed Wind Turbines with Full-Scale Power Converter - Type 4</a></li>
+  </ul></li>
+  <li><a href="#inverter-systems" id="toc-inverter-systems" class="nav-link" data-scroll-target="#inverter-systems"><span class="header-section-number">1.7</span> Inverter Systems</a>
+  <ul class="collapse">
+  <li><a href="#power-electronics-role-in-modern-power-systems" id="toc-power-electronics-role-in-modern-power-systems" class="nav-link" data-scroll-target="#power-electronics-role-in-modern-power-systems"><span class="header-section-number">1.7.1</span> Power Electronics Role in Modern Power Systems</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#achieving-a-100-renewable-grid-notes" id="toc-achieving-a-100-renewable-grid-notes" class="nav-link" data-scroll-target="#achieving-a-100-renewable-grid-notes"><span class="header-section-number">2</span> Achieving a 100% Renewable Grid (Notes)</a>
+  <ul class="collapse">
+  <li><a href="#dealing-with-variability-and-uncertainty" id="toc-dealing-with-variability-and-uncertainty" class="nav-link" data-scroll-target="#dealing-with-variability-and-uncertainty"><span class="header-section-number">2.1</span> Dealing with Variability and Uncertainty</a></li>
+  </ul></li>
+  <li><a href="#homework" id="toc-homework" class="nav-link" data-scroll-target="#homework"><span class="header-section-number">3</span> Homework</a>
+  <ul class="collapse">
+  <li><a href="#reading-1" id="toc-reading-1" class="nav-link" data-scroll-target="#reading-1"><span class="header-section-number">3.1</span> Reading 1</a>
+  <ul class="collapse">
+  <li><a href="#from-llm" id="toc-from-llm" class="nav-link" data-scroll-target="#from-llm"><span class="header-section-number">3.1.1</span> From LLM</a></li>
+  </ul></li>
+  <li><a href="#from-reading-2" id="toc-from-reading-2" class="nav-link" data-scroll-target="#from-reading-2"><span class="header-section-number">3.2</span> From Reading 2</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -163,6 +226,247 @@ ul.task-list li input[type="checkbox"] {
 <h1 data-number="1"><span class="header-section-number">1</span> IBR and Variable Speed Generation</h1>
 <section id="synchronous-machine" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="synchronous-machine"><span class="header-section-number">1.1</span> Synchronous Machine</h2>
+<ul>
+<li>Sinusoidally distributed balanced <span class="math inline">\(3\phi\)</span> stator windings</li>
+<li>The Rotor field winding is energized with DC Current <span class="math inline">\(I_f\)</span></li>
+<li>The Field <span class="math inline">\(B_f\)</span> rotates synchronously with the rotor at speed <span class="math inline">\(\omega\)</span>:
+<ul>
+<li>Induces sinewave voltages in stator windings</li>
+</ul></li>
+</ul>
+<section id="synchronous-machine-operation" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="synchronous-machine-operation"><span class="header-section-number">1.1.1</span> Synchronous Machine Operation</h3>
+<ul>
+<li>Ideal cylindirical-rotor machine connected to an infinite bus.</li>
+<li>The infinite bus represents a busbar of constant voltage, which can deliver or absorb active and reactive power without any limitations.</li>
+<li>The ideal machine has zero resistance and leakage reactance, infinite permeability, and no saturation, as well as zero reluctance torque.</li>
+<li><strong>The production of torque in the synchronous machine results from the natural tendency of two magnetic fields to align themselves.</strong></li>
+<li>The magnetic field produced by the stationary armature is denoted as <span class="math inline">\(\phi_s\)</span>.</li>
+<li>The magnetic field produced by the rotating field is <span class="math inline">\(\phi_f\)</span>.</li>
+<li>The resultant magnetic field is <span class="math display">\[ \phi_r = \phi_s + \phi_f \]</span></li>
+</ul>
+</section>
+</section>
+<section id="basic-induction-machines" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="basic-induction-machines"><span class="header-section-number">1.2</span> Basic Induction Machines</h2>
+<ul>
+<li>Sinusoidally distributed balanced <span class="math inline">\(3\phi\)</span> stator windings</li>
+<li>Rotor speed is generally non-synchronous:
+<ul>
+<li>Rotor can turn faster (generator) or slower (Motor) than input frequency</li>
+</ul></li>
+<li><strong>Would Rotors</strong>
+<ul>
+<li>Rotor windings brought out through sliprings. Allowing speed/torque control.</li>
+</ul></li>
+<li><strong>Squirrel-Cage Rotors</strong>
+<ul>
+<li>Rotor windings are simple, shorted bars, cast inot rotor laminations.</li>
+<li>Low-cost, Rugged, commercial/industrial work-horse</li>
+<li>First Wind Turbines</li>
+</ul></li>
+</ul>
+</section>
+<section id="frequency-voltage-and-generator-speed" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="frequency-voltage-and-generator-speed"><span class="header-section-number">1.3</span> Frequency, Voltage, and Generator Speed</h2>
+<ul>
+<li><span class="math display">\[ \text{Generator Frequency } (f) = {{\text{Number of revolutions pwer minutes } (N) * \text{Number of Magnetic Poles } (P)} \over 120}\]</span></li>
+</ul>
+<p><span class="math display">\[ f = {{NP} \over 120} \]</span></p>
+<ul>
+<li><strong>The main factors affecting the generator voltage</strong>
+<ul>
+<li>Number of turns of the stator windings</li>
+<li>The strength of the magnetic field</li>
+<li>The rotational speed of the rotor.</li>
+<li>The output load of the alternator.</li>
+<li>The Impedance of the load.</li>
+</ul></li>
+</ul>
+<p>V controlled by excitation<br>
+F controlled by speed of rotation</p>
+<p>120 is a constant to allow for the conversion of minutes to seconds and from poles to pairs of poles.</p>
+</section>
+<section id="why-variable-speed" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="why-variable-speed"><span class="header-section-number">1.4</span> Why Variable Speed?</h2>
+<ul>
+<li>Wind turbine speed is adjusted as a function of wind speed to maximize output power.</li>
+<li>Operation at the maximum power point can be realized over a wide power range.</li>
+<li>Small hydro turbines power output is also maximized using variable speed generation.</li>
+</ul>
+</section>
+<section id="mppt-and-variable-speed-systems" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="mppt-and-variable-speed-systems"><span class="header-section-number">1.5</span> MPPT and Variable Speed Systems</h2>
+<ul>
+<li>Electrical output power as a function of turbine speed parameter curves are plotted for different wind speeds.</li>
+<li><strong>Maximum Power Point Tracking</strong> (red curve) can be realized with a variable speed system.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="turbine_speed_vs_electrical_power.png" class="img-fluid figure-img" alt="Maximum Power Point Tracking"></p>
+<figcaption>Maximum Power Point Tracking</figcaption>
+</figure>
+</div>
+</section>
+<section id="electric-generators" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="electric-generators"><span class="header-section-number">1.6</span> Electric Generators</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="electric_generator_types.png" class="img-fluid figure-img" alt="Electric Generator Types"></p>
+<figcaption>Electric Generator Types</figcaption>
+</figure>
+</div>
+<p>Types 1-3 are induction generators and must have gearboxes to change “slow” rotor rotational speed (5-20 rpm) to “fast” generator rotational speed (750-3600 rpm) needed by the 60 Hz grid freq seen in stator winding.</p>
+<p>Type 4 maintains generator at “slow” rotor rotational speed producing low freq in stator winding which is transformed by converter to grid. Also called “direct-drive.” Usually uses a PM synchronous generator.</p>
+<section id="fixed-speed-wind-turbine---type-1" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="fixed-speed-wind-turbine---type-1"><span class="header-section-number">1.6.1</span> Fixed Speed Wind Turbine - Type 1</h3>
+<p><img src="type_1.png" class="img-fluid quarto-figure quarto-figure-center" alt="Type 1"> - Fixed Speed - limited control of slip (2-3%) and Real Power - Consumes VARs - The wind turbine rotor blades may be pitch-regulated to control power.</p>
+</section>
+<section id="limited-variable-speed-wind-turbine---type-2" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="limited-variable-speed-wind-turbine---type-2"><span class="header-section-number">1.6.2</span> Limited Variable Speed Wind Turbine - Type 2</h3>
+<p><img src="type_2.png" class="img-fluid quarto-figure quarto-figure-center" alt="Type 2"> - Variable Speed - More Control of Slip (up to 10%) - Consumes VARs - Variable Rotor Resistance via slip rings with wound rotor IG.</p>
+</section>
+<section id="variable-speed-wind-turbines-with-partial-scale-power-converter---type-3" class="level3" data-number="1.6.3">
+<h3 data-number="1.6.3" class="anchored" data-anchor-id="variable-speed-wind-turbines-with-partial-scale-power-converter---type-3"><span class="header-section-number">1.6.3</span> Variable-Speed Wind Turbines with Partial-Scale Power Converter - Type 3</h3>
+<p><img src="type_3.png" class="img-fluid quarto-figure quarto-figure-center" alt="Type 3"> - Variable Speed - More control of slip (up to 50%) - Can Control VARs - Partial Scale Converters Required (~30% of Machine)</p>
+</section>
+<section id="variable-speed-wind-turbines-with-full-scale-power-converter---type-4" class="level3" data-number="1.6.4">
+<h3 data-number="1.6.4" class="anchored" data-anchor-id="variable-speed-wind-turbines-with-full-scale-power-converter---type-4"><span class="header-section-number">1.6.4</span> Variable-Speed Wind Turbines with Full-Scale Power Converter - Type 4</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="type_4.png" class="img-fluid figure-img" alt="Type 4"></p>
+<figcaption>Type 4</figcaption>
+</figure>
+</div>
+<p>An opportunity to eliminate the gearbox exists. Since wild AC from generator can be conditioned to 60 HZ grid.</p>
+<p>Machine’s excitation can be controlled by machine side converter- Can use any type of machine, field wound SG, PM-SG or IG</p>
+<ul>
+<li>Variable Speed - Wide control of slip (up to 100%)</li>
+<li>Can control VARs</li>
+<li>Full Scale Converters Required (&gt;100% of Machine)</li>
+</ul>
+</section>
+</section>
+<section id="inverter-systems" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="inverter-systems"><span class="header-section-number">1.7</span> Inverter Systems</h2>
+<section id="power-electronics-role-in-modern-power-systems" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored" data-anchor-id="power-electronics-role-in-modern-power-systems"><span class="header-section-number">1.7.1</span> Power Electronics Role in Modern Power Systems</h3>
+<ul>
+<li>Power conversion and conditioning</li>
+<li><strong>DC to AC</strong> for <strong>PV</strong></li>
+<li><strong>AC-DC-AC</strong> conversion for Wind Systems</li>
+<li>Power control for <strong>maximum power</strong></li>
+<li>Ensuring grid interconnect requirements</li>
+<li>Grid support and mimicking conventional generator characteristics (<strong>inertia</strong>)</li>
+<li>‘Smart grid’ functions</li>
+<li>FACTS (flexible ac trnamission system) and other power control devices in tranmission systems</li>
+<li>Interface for various types of energy storage, including electric vehicles as storage (V2G)</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="achieving-a-100-renewable-grid-notes" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Achieving a 100% Renewable Grid (Notes)</h1>
+<section id="dealing-with-variability-and-uncertainty" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="dealing-with-variability-and-uncertainty"><span class="header-section-number">2.1</span> Dealing with Variability and Uncertainty</h2>
+<ul>
+<li><p>Variable Renewable Energy (VRE) such as wind and solar photovoltaic (PV). Wind and solar have variable and uncertian power output determined by local weather conditions.</p></li>
+<li><p>Many factors required greater grid flexibility to accomodate the for more VRE</p></li>
+<li><p>PV power has a natural diurnal cycle and it does not produce at night. Leading to larger net load ramps than might otherwise be seen in the evenings.</p></li>
+<li><p>Wind as a less pronounced diurnal cycle. In the US it produces more power at night or during large changes of weather conditions in large geographic areas.</p></li>
+<li><p>Both can combines to produce too much energy during a single surge and curtailment of these must be perfomed.</p></li>
+<li><p>“Curtailment decisions rely on a complex set of variables, including the flexibility of the remaining generation fleet.”</p></li>
+<li><p>Solutions to VRE limitations include:</p>
+<ul>
+<li>“smoothing of overall VRE power output through sufficient ammounts of geographic diversity when siting the VRE generators”</li>
+<li>“expansion of the transmission system to be able to move large amounts of power more efficiently from regions where VRE generators are currently producing to the areas where load is currently needed.”</li>
+</ul></li>
+</ul>
+<p>“Technology that allows temporal shifting of VRE is energy storage.”</p>
+<p>Energy storage can shift power from times when it mithg otherwise be curtailed to times when the power output from VRE is lower.</p>
+<p>Multiple power storage technologies: - pumped hydropower fleet - compressed aire energy storage systems - various battery technologies</p>
+<p>Demand-response technologies by shifting load demand to where it’s necessary.</p>
+<p>New loads that have flexibility can play a similar role.</p>
+<p>“Characterizing or reducing uncertainty associated with VRE output or load enables a more efficient utilization of the entire power system”</p>
+</section>
+</section>
+<section id="homework" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Homework</h1>
+<p>Use the Reading References in this section to answer <strong>TWO</strong> questions below:</p>
+<ol type="1">
+<li>Review the technologies needed to allow for more renewable energy resources to be integrated to the power grid.</li>
+<li>Discuss the different approaches to maintain grid inertia with high penetration of renewable energy resources.</li>
+</ol>
+<section id="reading-1" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="reading-1"><span class="header-section-number">3.1</span> Reading 1</h2>
+<ol type="1">
+<li>Review the technologies needed to allow for more renewable energy resources to be integrated in the power grid.</li>
+</ol>
+<ul>
+<li>smoothing of overall VRE power output through sufficient amounts of geographic diversity and expansion of the transmission system to be able to move large amounts of power more efficiently from regions where VRE generators are currently producing to other areas can both be accomplished through greater <strong>coordination among balancing authority areas and faster interchange intervals</strong>.</li>
+<li><strong>Energy storage</strong> has value in the power system at many timescales, the most important of which is in shifting wind and solar power from times when it might otherwise be curtailed to times when the power outpu tof VRE is lower than current demand.
+<ul>
+<li>… will play a key role in managing energy balance in systems with high penetrations of VRE, and it is also interfaced with the grid through inverters.</li>
+</ul></li>
+<li><strong>Advanced renewable energy and load forcastin</strong> can characterize an reduce uncertainty associate with VRE output or load enabling a mor eefficient utilization of the entire power system.</li>
+<li><strong>Inverter technologies</strong> are important because they are used across a wid variety of applications.
+<ul>
+<li>The characteristics of the chosen control strategy dictates the electircal dynamics of the inverter during disturbances and how it interacts with the grid on its AC side.</li>
+</ul></li>
+<li><strong>Next-generation grid-forming inverters</strong> that enable the transition to an inverter based infrastructure and are capable of regulating system voltages and frequrency through local decentralized control.</li>
+</ul>
+<ol start="2" type="1">
+<li>Discuss the different approaches to maintain grid inertia with high penetration of renewable energy resources.</li>
+</ol>
+<ul>
+<li><strong>Next-generation grid-forming inverters</strong> that enable the transition to an inverter based infrastructure and are capable of regulating system voltages and frequrency through local decentralized control.</li>
+<li><strong>Controller design or active power controllers</strong> for VRE can provide a synthetic inertia response to stabilize frequency excursions.
+<ul>
+<li>may allow wind turbines of injectin additional active power into the grid by extracting the eneryg stroed in the rotating mass of blades and generators. PV inverters can also provide inertia-like response if curtailment is utilized.</li>
+</ul></li>
+</ul>
+<section id="from-llm" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="from-llm"><span class="header-section-number">3.1.1</span> From LLM</h3>
+<ol type="1">
+<li>Technologies for Integrating Renewable Energy Resources To effectively integrate more renewable energy resources into the power grid, several key technologies are essential:</li>
+</ol>
+<p>Inverter-Based Systems: The shift from traditional synchronous generators to inverter-based systems is critical for accommodating renewable energy sources (RES) like wind and solar. Inverters convert direct current (DC) generated by solar panels and wind turbines into alternating current (AC) for grid use. Advanced inverter technologies can provide grid support functions, such as voltage regulation and frequency control, which are vital for maintaining grid stability.</p>
+<p>Advanced Control Strategies: The implementation of next-generation grid-forming inverters is necessary to ensure reliable operation in inverter-dominated grids. These inverters can autonomously manage voltage and frequency, mimicking the behavior of conventional synchronous generators. By employing sophisticated control algorithms, they can respond to grid disturbances and maintain stability, even with high levels of variable renewable energy.</p>
+<p>Energy Storage Solutions: Energy storage technologies, such as batteries, pumped hydro storage, and flywheels, play a crucial role in managing the variability of renewable energy generation. These systems can store excess energy produced during peak generation periods and release it during times of low generation or high demand. By providing backup power and balancing supply and demand, energy storage enhances grid reliability and facilitates the integration of more RES.</p>
+<p>Demand Response Programs: Implementing demand response strategies allows for the adjustment of electricity consumption in response to supply conditions. By incentivizing consumers to reduce or shift their energy usage during peak periods or when renewable generation is low, demand response can help balance the grid and reduce reliance on fossil fuel-based generation.</p>
+<p>Smart Grid Technologies: The adoption of smart grid technologies, including advanced metering infrastructure and real-time monitoring systems, enables better management of renewable energy resources. These technologies facilitate communication between grid operators and consumers, allowing for more efficient energy distribution and improved integration of distributed energy resources.</p>
+</section>
+</section>
+<section id="from-reading-2" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="from-reading-2"><span class="header-section-number">3.2</span> From Reading 2</h2>
+<ol start="2" type="1">
+<li>Discuss the different approaches to maintain grid inertia with high penetration of renewable energy resources.</li>
+</ol>
+<ul>
+<li><p>ERCOT (Texas Grid) has historically relied on <strong>loads</strong> as a source of frequency response (called “load resources”). Equipping certain large industrial loads with snesors that measure frequency and are programmed to disconnect automatically when the frequency drops to a certain level.</p></li>
+<li><p>The use of <strong>loads</strong> as a source of frequency response allows ERCOT to maintain frequency while providing other benefits, such as potentially more efficient system operation.</p></li>
+<li><p>Summary of Options to Maintain Frequency Stability</p>
+<ul>
+<li>Maintain Inertia
+<ul>
+<li><strong>System operation</strong></li>
+<li><strong>Synchronous renewable energy</strong></li>
+<li><strong>Synchronous condensers</strong></li>
+</ul></li>
+<li>Provide More Response Time
+<ul>
+<li><strong>Reduced contingency size</strong></li>
+<li><strong>Reduced UFLS (underfrequency load shedding) settings</strong></li>
+</ul></li>
+<li>Fast Frequency Response
+<ul>
+<li><strong>Load</strong></li>
+<li><strong>Extracted wind kinetic energy</strong></li>
+<li><strong>Dispatch of inverter-based resources</strong></li>
+<li><strong>Additional or enhanced primary frequency response</strong></li>
+</ul></li>
+</ul></li>
+</ul>
 
 
 </section>
@@ -261,7 +565,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/Glensana\.github\.io\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -594,4 +898,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
