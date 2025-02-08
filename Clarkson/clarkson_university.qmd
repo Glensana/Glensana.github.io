@@ -1,0 +1,17 @@
+---
+title: "Clarkson University Notes"
+---
+
+# Clarkson Courses
+
+## ME 502 - Engineering Analysis
+
+## ME 500 - Elasticity
+
+## ME 574 - Numerical Heat Transfer & Fluid Flow
+
+## ME 533 - Additive Manufacturing
+
+## ME 583 - Turbine Engineering
+
+## [EE 600 - Disruptive Technology](/Clarkson/EE_600/EE_600.qmd)
