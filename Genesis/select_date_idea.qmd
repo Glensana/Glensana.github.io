@@ -1,5 +1,10 @@
 ---
 title: Please select a date idea for Saturday, February 15
+html:
+    code-fold: true
+execute:
+    enabled: true
+jupyter: python3
 ---
 # Dinner
 
@@ -29,7 +34,16 @@ title: Please select a date idea for Saturday, February 15
 
 # Activity
 
+- [ ] Play Video Games
+- [ ] Watch a Romantic Movie
+- [ ] Write a letter
+- [ ] Take pictures outside of nature/landscape
+- [ ] Drinking Game ;)
 
-# When you have finish selecting your options, click the "DONE" button below, please!
+# When you have finish selecting your options, send me a screenshot
 
-[DONE!](/Genesis/select_date_idea.qmd){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="CONTINUE"}
+I couldn't figure out the checkboxes lol. Sorry
+
+## Once you've finished, click the "DONE" button below, please!
+
+[DONE!](/Genesis/done.qmd){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="CONTINUE"}
