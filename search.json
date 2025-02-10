@@ -11,7 +11,14 @@
     "href": "Genesis/select_date_idea.html",
     "title": "Please select a date idea for Saturday, February 15",
     "section": "",
-    "text": "Dinner\n\nSushi\nRamen\nPasta\nPizza\nMofongo\nSteak\n\n\n\nDrink\n\nChampagne\nWine\nGin\nRum\nBoba Tea\n\n\n\nDessert\n\nIce Cream\nDonuts\nCake\nCupcake\nMacaroon\nStrawberry with Chocolate\n\n\n\nActivity\n\n\nWhen you have finish selecting your options, click the “DONE” button below, please!\nDONE!"
+    "text": "Sushi\nRamen\nPasta\nPizza\nMofongo\nSteak"
+  },
+  {
+    "objectID": "Genesis/select_date_idea.html#once-youve-finished-click-the-done-button-below-please",
+    "href": "Genesis/select_date_idea.html#once-youve-finished-click-the-done-button-below-please",
+    "title": "Please select a date idea for Saturday, February 15",
+    "section": "Once you’ve finished, click the “DONE” button below, please!",
+    "text": "Once you’ve finished, click the “DONE” button below, please!\nDONE!"
   },
   {
     "objectID": "Genesis/no_2.html#will-you-be-my-valentine",
@@ -19,6 +26,13 @@
     "title": "OK, Second try!",
     "section": "WILL YOU BE MY VALENTINE?",
     "text": "WILL YOU BE MY VALENTINE?\nYES\nNO :("
+  },
+  {
+    "objectID": "Genesis/done.html#te-amooo",
+    "href": "Genesis/done.html#te-amooo",
+    "title": "Thank you baby!",
+    "section": "TE AMOOO !!!!",
+    "text": "TE AMOOO !!!!\nI will try next time to send it with more time so like that we can have more organized fun! :)"
   },
   {
     "objectID": "Genesis/no_1.html",
