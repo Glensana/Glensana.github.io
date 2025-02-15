@@ -1,5 +1,6 @@
 import re
 
+
 def get_checkbox_status(markdown_text):
     """
     Extracts the status of checkboxes from markdonw text.
@@ -20,10 +21,9 @@ def get_checkbox_status(markdown_text):
         checkbox_status.append((text, status))
     return checkbox_status
 
-    
+
 if __name__ == "__main__":
-    with open('Genesis/select_date_idea.qmd') as qmd:
+    with open("Genesis/select_date_idea.qmd") as qmd:
         file = qmd.read()
         check_status = get_checkbox_status(file)
         print(check_status)
-

@@ -1,10 +1,5 @@
 ---
 title: Please select a date idea for Saturday, February 15
-html:
-    code-fold: true
-execute:
-    enabled: true
-jupyter: python3
 ---
 # Dinner
 
