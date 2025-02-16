@@ -1,0 +1,27 @@
+---
+title: Our First Blog!
+subtitle: Starting to blog together 
+description: Establishing the format we want to follow to use this blog.
+image: ../gifs/flower.gif
+author: Glen Sanabria
+date: '2025-02-15'
+open-graph: 
+  description: Establishing the format we want to follow to use this blog.
+  image: ../gifs/flower.gif
+twitter-card:
+  description: Establishing the format we want to follow to use this blog.
+  image: ../gifs/flower.gif
+fig-cap-location: bottom
+fig-align: left
+filters:
+   - lightbox
+lightbox: auto
+---
+
+![](../images/eating_pho_az.JPG){fig-alt="Us, Together, Forever" fig-align="center" width=80% height=55%}
+
+I'd like to use this a blog or public journal to share our thoughts througout our life. I think that this can be a cool way to write what we think even though we're not available in the present. Sometimes I have so many things I would like to share with you and what's on my mind but sometimes I can't find the "right time" to share these thoughts (either because of time/responsibility constraints or mood not being appropriate).
+
+I also feel like this can be a good way for you to see what goes on my mind, like you mentioned you wanted to before. This will allow us to take some time and write down what we think and share it with each other. I know that when I write things down, I'm able to fully feel the feelings and dive into the topic properly. Hopefully this will spark more discussion and conversation. 
+
+I plan on making a couple of other pages including "CV" pages with a different url to share with employers and others for our respective careers. I will also have other projects like my "University Notes" and a blog documenting all my DIY projects. If you want to participate in other blogs let me know!

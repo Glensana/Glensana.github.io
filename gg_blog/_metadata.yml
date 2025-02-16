@@ -1,0 +1,23 @@
+toc: true
+# TODO: Tweak ToC depth
+toc-depth: 4
+number-sections: false
+reference-location: margin
+date-format: "dddd, DD MMMM YYYY"
+reading-time: true
+# Page navigation doesn't work.
+page-navigation: true
+website:
+  reader-mode: true
+  # TODO: Not able to get per page footers.
+  page-footer: 
+    left: "[GG Blog](https://glensana.github.io/gg_blog.html) © 2022–2025 to ∞ by [Glen Sanabria](https://glensana.github.io/gg_blog/about.html) is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1) | [Site Version 2.0.0.0](https://glensana.github.io/patch_notes.html/) | This site is powered by [Quarto](https://quarto.org)."
+    right:
+      - icon: envelope
+        href: gledemar99@hotmail.com
+format:
+  html:
+    mermaid:
+      theme: neutral
+
+# TODO: Try a word cloud for categories listing.

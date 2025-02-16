@@ -1,25 +1,43 @@
 ---
-title: "University Notes"
+title: '{{< animate bounceIn "Glensana Website Hub" delay=1s duration=faster >}}'
+comments: False
+format:
+    html:
+        page-layout: full
+listing:
+    - id: university-notes
+      contents: Clarkson
+      type: table
+      max-items: 6
+      table-striped: true
+      sort:
+        - "date desc"
+        - "title asc"
+      fields: [title, description, date]
+about:
+    id: about-glensana
+    template: jolla
+    image: images/Profile.jpg
+    image-shape: round
+    links:
+        - icon: file-post-fill
+          text:  "{{< animate fadeIn 'GitHub'>}}"
+          href: https://github.com/Glensana
+back-to-top-navigation: false
 ---
 
-This is a Quarto website.
+:::{#about-glensana .animate__animated .animate__zoomInDown}
 
-# Universidad de Puerto Rico - Humacao
+* Read more about me [here](about.qmd).
+* Feel free to contanct me by clicking one of the buttons below!
 
-# Universidad de Puerto Rico - Mayagüez
+:::
 
-# Clarkson University ME Masters
+<!-- :::::{.grid}
+::::{.g-col-12 .g-col-md-6 .animate__animated .animate__fadeIn .animate__faster .animate__delay-1s} -->
 
-## Clarkson Courses
+## University Notes
+Click [here](Clarkson/clarkson_university.qmd) to explore my "University Notes".
 
-### ME 502 - Engineering Analysis
-
-### ME 500 - Elasticity
-
-### ME 574 - Numerical Heat Transfer & Fluid Flow
-
-### ME 533 - Additive Manufacturing
-
-### ME 583 - Turbine Engineering
-
-### [EE 600 - Disruptive Technology](/Clarkson/EE_600/EE_600.qmd)
+:::{#university-notes}
+:::

@@ -1,0 +1,6 @@
+---
+title: "{{< animate fadeIn 'About GG' duration=faster >}}"
+comments: false
+page-layout: full
+---
+Some description goes here

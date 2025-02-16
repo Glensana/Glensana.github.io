@@ -2,15 +2,11 @@ project:
   type: website
 
 website:
-  title: "Glensana Website Hub"
+  title: "GG Blog"
   page-navigation: true
   navbar:
     left:
-      - href: index.qmd
-        text: Home
       - about.qmd
-      - Clarkson/clarkson_university.qmd
-
 format:
   html:
     theme: light
