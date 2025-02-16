@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>quarto-input636ca93e34b534b8 – Glensana Website Hub</title>
+<title>quarto-input17199fa85791880c – Glensana Website Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,20 +72,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-university-notes .list');
+    const listingTargetEl = window.document.querySelector('#listing-posts .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-description','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-title','listing-subtitle','listing-author','listing-description','listing-date','listing-image','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author"],
+      searchColumns: ["listing-title","listing-date","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-university-notes'] = new List('listing-university-notes', options);
+    window['quarto-listings']['listing-posts'] = new List('listing-posts', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -134,7 +135,13 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Welcome to GG Blog by Génesis &amp; Glen – Glensana Website Hub">
+<meta property="og:description" content="Here you can see the thoughts and conversations Génesis and Glen have.">
+<meta property="og:site_name" content="Glensana Website Hub">
+<meta name="twitter:title" content="Welcome to GG Blog by Génesis &amp; Glen – Glensana Website Hub">
+<meta name="twitter:description" content="Here you can see the thoughts and conversations Génesis and Glen have.">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -144,7 +151,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Glensana Website Hub</span>
     </a>
   </div>
@@ -155,15 +162,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Clarkson/clarkson_university.html"> 
+    <a class="nav-link active" href="../gg_blog/index.html" aria-current="page"> 
+<span class="menu-text">GG Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Clarkson/clarkson_university.html"> 
 <span class="menu-text">Clarkson University Notes</span></a>
   </li>  
 </ul>
@@ -177,55 +188,47 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#university-notes" id="toc-university-notes" class="nav-link active" data-scroll-target="#university-notes">University Notes</a></li>
-  </ul>
-</nav>
-    </div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<p><a href="https://glensana.github.io/forblog/">ForBlog</a> © 2022–2025 to ∞ by <a href="https://glensana.github.io/about.html">Glen Sanabria</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1">CC BY-NC 4.0</a></p>
+</div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
-
-
-
-<div class="quarto-about-jolla column-page-left">
-  <img src="images/Profile.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="animate__animated animate__bounceIn" style="display: inline-block;">Glensana Website Hub</span></h1>
-</div>
-<div class="quarto-title-meta column-page-left">
-  </div>
-</header><div id="about-glensana" class="animate__animated animate__zoomInDown">
-<ul>
-<li>Read more about me <a href="./about.html">here</a>.</li>
-<li>Feel free to contanct me by clicking one of the buttons below!</li>
-</ul>
-</div> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://github.com/Glensana" class="about-link" rel="" target="">
-    <i class="bi bi-file-post-fill"></i>
-     <span class="about-link-text"><span class="animate__animated animate__fadeIn" style="display: inline-block;">GitHub</span></span>
-  </a>
-</div>
+<h1 class="title"><span class="animate__animated animate__fadeInDown" style="display: inline-block;">Welcome to GG Blog by Génesis &amp; Glen</span></h1>
 </div>
 
-<!-- :::::{.grid}
-::::{.g-col-12 .g-col-md-6 .animate__animated .animate__fadeIn .animate__faster .animate__delay-1s} -->
-<section id="university-notes" class="level2">
-<h2 data-anchor-id="university-notes">University Notes</h2>
-<p>Click <a href="./Clarkson/clarkson_university.html">here</a> to explore my “University Notes”.</p>
-<div id="listing-university-notes" class="quarto-listing quarto-listing-container-table">
+
+
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span class="animate__animated animate__fadeInDown" style="display: inline-block;">Here you can see the thoughts and conversations Génesis and Glen have.</span></p>
+<div class="animate__animated animate__slideInLeft animate__duration-250ms">
+<!-- ### Featured Posts
+:::{#featured}
+:::
+
+<br></br>
+--- -->
+<p><br><br></p>
+<!-- ### All Posts -->
+<div id="listing-posts" class="quarto-listing quarto-listing-container-default">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-university-notes-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-university-notes'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+     <select id="listing-posts-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-posts'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
        <option value="" disabled="" selected="" hidden="">Order By</option>
        <option value="index" data-direction="asc">Default</option>
          <option value="listing-date-sort" data-direction="asc">
@@ -234,8 +237,8 @@ window.Quarto = {
          <option value="listing-date-sort" data-direction="desc">
           Date - Newest
         </option>
-         <option value="listing-title-sort" data-direction="asc">
-          Title
+         <option value="listing-author" data-direction="asc">
+          Author
         </option>
      </select>
   </div>
@@ -244,120 +247,48 @@ window.Quarto = {
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-<table class="quarto-listing-table table table-striped">
-<thead>
-<tr>
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-<th>
-Description
-</th>
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-listing-file-modified-sort="1739585771787" data-listing-reading-time-sort="1" data-listing-word-count-sort="90" data-listing-title-sort="Clarkson University Notes" data-listing-filename-sort="clarkson_university.qmd">
-<td>
-<a href="./Clarkson/clarkson_university.html" class="title listing-title">Clarkson University Notes</a>
-</td>
-<td>
-<span class="listing-description">“University Notes” This is a Quarto website.</span>
-</td>
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="1" data-listing-file-modified-sort="1739582001568" data-listing-reading-time-sort="1" data-listing-word-count-sort="36" data-listing-title-sort="EE 600 - Disruptive Technologies" data-listing-filename-sort="EE_600.qmd">
-<td>
-<a href="./Clarkson/EE_600/EE_600.html" class="title listing-title">EE 600 - Disruptive Technologies</a>
-</td>
-<td>
-<span class="listing-description">
-
-<section id="week-1-introduction" class="level2">
-
-</section>
-<section id="week-2-introduction-to-solar-energy" class="level2">
-
-</section>
-<section id="week-3-the-rise-of-der-and-the-microgrid" class="level2">
-
-</section>
-<section id="week-4-offshore-wind-energy" class="level2">
-
-</section>
-<section id="week-5-grid-scale-energy-storage" class="level2">
-
-</section>
-<section id="week-6-from-synchronous-generators-to-ibrs" class="level2">
-
-
-
-</section>
-</span>
-</td>
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="2" data-listing-date-sort="1728100800000" data-listing-file-modified-sort="1739582001611" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1997" data-listing-title-sort="EE600 Week 6 Notes" data-listing-filename-sort="EE_600_10_5_2024.qmd">
-<td>
-<a href="./Clarkson/EE_600/EE_600_Week_6/EE_600_10_5_2024.html" class="title listing-title">EE600 Week 6 Notes</a>
-</td>
-<td>
-<span class="listing-description"><span class="math display">\[ f = {{NP} \over 120} \]</span></span>
-</td>
-<td>
-<span class="listing-date">Oct 5, 2024</span>
-</td>
-</tr>
-<tr data-index="3" data-listing-date-sort="1727582400000" data-listing-file-modified-sort="1739582001583" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2051" data-listing-title-sort="EE600 Week 5 Notes" data-listing-filename-sort="EE_600_notes_9_29_2024.qmd">
-<td>
-<a href="./Clarkson/EE_600/EE_600_Week_5/EE_600_notes_9_29_2024.html" class="title listing-title">EE600 Week 5 Notes</a>
-</td>
-<td>
-<span class="listing-description"><strong>Notes:</strong> Open-loop systems use a free flowing source of water for either the upper or lower reservoir. For a closed-loop pumped storage hydropower, neither the upper reservoir…</span>
-</td>
-<td>
-<span class="listing-date">Sep 29, 2024</span>
-</td>
-</tr>
-<tr data-index="4" data-listing-date-sort="1726286400000" data-listing-file-modified-sort="1739582001583" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2965" data-listing-title-sort="EE600 Week 3 Notes" data-listing-filename-sort="EE600_notes_9_14_2024.qmd">
-<td>
-<a href="./Clarkson/EE_600/EE_600_Week_3/EE600_notes_9_14_2024.html" class="title listing-title">EE600 Week 3 Notes</a>
-</td>
-<td>
-<span class="listing-description">Cost</span>
-</td>
-<td>
-<span class="listing-date">Sep 14, 2024</span>
-</td>
-</tr>
-<tr data-index="5" data-listing-date-sort="1725768000000" data-listing-file-modified-sort="1739582001579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2083" data-listing-title-sort="EE600 Notes" data-listing-filename-sort="EE600_9_8_2024.qmd">
-<td>
-<a href="./Clarkson/EE_600/EE_600_Week_2/EE600_9_8_2024.html" class="title listing-title">EE600 Notes</a>
-</td>
-<td>
-<span class="listing-description">Thermal solar and energy storage</span>
-</td>
-<td>
-<span class="listing-date">Sep 8, 2024</span>
-</td>
-</tr>
-</tbody>
-</table>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-left" data-index="0" data-listing-date-sort="1739595600000" data-listing-file-modified-sort="1739671372434" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="213">
+<div class="thumbnail">
+<p><a href="../gg_blog/posts/first_blog.html" class="no-external"></a></p><a href="../gg_blog/posts/first_blog.html" class="no-external">
+<p><img loading="lazy" src="../gg_blog/gifs/flower.gif" class="thumbnail-image"></p>
+</a><p><a href="../gg_blog/posts/first_blog.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../gg_blog/posts/first_blog.html" class="no-external">Our First Blog!</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../gg_blog/posts/first_blog.html" class="no-external">Starting to blog together</a>
+</div>
+<div class="listing-description">
+<a href="../gg_blog/posts/first_blog.html" class="no-external">Establishing the format we want to follow to use this blog.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../gg_blog/posts/first_blog.html" class="no-external">
+<div class="listing-date">
+15 February 2025
+</div>
+<div class="listing-author">
+Glen Sanabria
+</div>
+<div class="listing-reading-time">
+2 min
+</div>
+</a>
+</div>
+</div>
+</div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
 </div>
+<p><br><br></p>
+</div>
 
 
 
-
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -380,6 +311,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -445,7 +383,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/Glensana\.github\.io\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -778,5 +716,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
